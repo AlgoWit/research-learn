@@ -6,7 +6,7 @@
 
 .. _imbalanced-learn: http://imbalanced-learn.org/en/stable/
 
-|Travis|_ |AppVeyor|_ |Codecov|_ |CircleCI|_ |ReadTheDocs|_ |PythonVersion|_ |Pypi|_ |Conda|_ |Black|_
+|Travis|_ |AppVeyor|_ |Codecov|_ |CircleCI|_ |ReadTheDocs|_ |PythonVersion|_ |Pypi|_ |Black|_
 
 .. |Travis| image:: https://travis-ci.org/AlgoWit/research-learn.svg?branch=master
 .. _Travis: https://travis-ci.org/AlgoWit/research-learn
@@ -28,9 +28,6 @@
 
 .. |Pypi| image:: https://badge.fury.io/py/research-learn.svg
 .. _Pypi: https://badge.fury.io/py/research-learn
-
-.. |Conda| image:: https://anaconda.org/algowit/research-learn/badges/installer/conda.svg
-.. _Conda: https://conda.anaconda.org/algowit
 
 .. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
 .. _Black: https://github.com/ambv/black
@@ -58,8 +55,8 @@ following:
 
 - numpy(>=1.1)
 - statsmodels(>=0.9.0)
-- scikit-learn(>=0.21)
-- imbalanced-learn(>=0.4.3)
+- scikit-learn(>=0.22)
+- imbalanced-learn(>=0.6.0)
 
 Additionally, to run the examples, you need matplotlib(>=2.0.0) and
 pandas(>=0.22).

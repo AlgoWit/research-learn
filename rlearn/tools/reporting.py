@@ -68,8 +68,9 @@ def report_model_search_results(model_search_cv, sort_results=None):
                 )
             else:
                 options = 'mean_test_score'
-            error_msg = f'Parameter `sort_results` should be one of mean_fit_score, '
-            f'{options}. Instead {sort_results} found.'
+            error_msg = (
+                f'Parameter `sort_results` should be one of mean_fit_score, {options}.'
+            )
 
             # Raise custom error
             raise KeyError(error_msg)

@@ -384,7 +384,6 @@ class ModelSearchCV(GridSearchCV):
             param_grid=param_grid,
             scoring=scoring,
             n_jobs=n_jobs,
-            iid=False,
             refit=refit,
             cv=cv,
             verbose=verbose,
@@ -420,7 +419,7 @@ class ModelSearchCV(GridSearchCV):
     def fit(self, X, y=None, groups=None, **fit_params):
 
         # Call superclass fit method
-        super(ModelSearchCV, self).fit(X, y, groups, **fit_params)
+        super(ModelSearchCV, self).fit(X, y, groups=groups, **fit_params)
 
         # Modify attributes
         self._modify_grid_search_attrs()

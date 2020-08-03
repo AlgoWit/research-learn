@@ -25,9 +25,9 @@ INSTALL_REQUIRES = [
     'numpy>=1.1',
     'pandas>=0.23.0',
     'statsmodels>=0.9.0', 
-    'scikit-learn>=0.21', 
-    'imbalanced-learn>=0.4.3',
-    'tqdm>=4.30.0'
+    'scikit-learn>=0.22', 
+    'imbalanced-learn>=0.6.0',
+    'rich>=5.0.0'
 ]
 CLASSIFIERS = ['Intended Audience :: Science/Research',
                'Intended Audience :: Developers',

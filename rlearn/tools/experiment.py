@@ -8,7 +8,7 @@ machine learning experiments.
 
 from collections import Counter
 
-from tqdm import tqdm
+from rich.progress import track
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator
@@ -190,14 +190,16 @@ class ImbalancedExperiment(BaseEstimator):
 
         # Populate results table
         datasets = check_datasets(datasets)
-        for dataset_name, (X, y) in tqdm(datasets, desc='Datasets'):
+        for dataset_name, (X, y) in track(datasets, description='Datasets'):
 
             # Fit model search
             self.mscv_.fit(X, y)
 
             # Get results
             result = pd.DataFrame(self.mscv_.cv_results_)
-            scoring_cols = [col for col in result.columns if 'mean_test' in col]
+            scoring_cols = [
+                col for col in result.columns.tolist() if 'mean_test' in col
+            ]
             result.rename(
                 columns=dict(zip(scoring_cols, self.scoring_cols_)), inplace=True
             )

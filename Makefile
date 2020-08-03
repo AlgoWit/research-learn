@@ -38,5 +38,3 @@ upload-pypi:
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
 
-upload-conda:
-	cd ./conda-recipe && . conda_deployment.sh
